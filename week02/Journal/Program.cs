@@ -1,3 +1,5 @@
+// I asked for a mood in the Entry class and i saved it in the Journal class.
+
 using System;
 
 class Program
