@@ -3,7 +3,7 @@ using System;
 
 public class Entry
 {
-   public (string, string) Display()
+   public (string, string) AddEntry()
     {
         PromptGenerator prompt = new PromptGenerator();
         string randomPrompt = prompt.GetRandomPrompt();

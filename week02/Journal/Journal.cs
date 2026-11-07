@@ -12,7 +12,7 @@ public class Journal
     public void AddEntries()
     {
         Entry entry = new Entry();
-        (string response, string prompt) = entry.Display();
+        (string response, string prompt) = entry.AddEntry();
         DateTime theCurrentTime = DateTime.Now;
         string dateText = theCurrentTime.ToShortDateString();
         _journalEntries.Add(response);
@@ -28,8 +28,9 @@ public class Journal
         {
             Console.WriteLine($"{_dateEntries[i]} Prompt: {_promptEntries[i]}");
             Console.WriteLine($"Response: {_journalEntries[i]}");
+            Console.WriteLine();
         }
-        Console.WriteLine();
+        
     }
 
     public void LoadFromFile(string _filename)

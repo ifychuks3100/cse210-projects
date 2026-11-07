@@ -40,6 +40,7 @@ class Program
             
             else if (choice == "3")
             {
+                Console.WriteLine();
                 Console.Write("Enter file name:");
                 string filename = Console.ReadLine();
                 _journal.LoadFromFile(filename);
@@ -47,17 +48,22 @@ class Program
 
             else if (choice == "4")
             {
+                Console.WriteLine();
                 Console.Write("Enter file name:");
                 string filename = Console.ReadLine();
                 _journal.SaveToFile(filename);
             }
             else if (choice == "5")
             {
+                Console.WriteLine();
                 Console.WriteLine("Goodbye!");
+                Console.WriteLine();
             }
             else
             {
+                Console.WriteLine();
                 Console.WriteLine("Please select a valid option.");
+                Console.WriteLine();
             }
         }
         
