@@ -13,9 +13,8 @@ public class Journal
     public void AddEntries()
     {
         Entry entry = new Entry();
-        (string response, string prompt, string mood) = entry.AddEntry();
-        DateTime theCurrentTime = DateTime.Now;
-        string dateText = theCurrentTime.ToShortDateString();
+        (string response, string prompt, string dateText, string mood) = entry.AddEntry();
+        
         _journalEntries.Add(response);
         _promptEntries.Add(prompt);
         _dateEntries.Add(dateText);
@@ -36,9 +35,15 @@ public class Journal
         
     }
 
+
     public void LoadFromFile(string _filename)
     {
         string filename = _filename;
+
+        _promptEntries.Clear();
+        _journalEntries.Clear();
+        _dateEntries.Clear();
+        _moodEntries.Clear();
 
         string[] lines = File.ReadAllLines(filename);
 
